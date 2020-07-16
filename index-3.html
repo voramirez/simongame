@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simon</title>
+
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <section id="content">
+      <h1>Simon</h1>
+      <h2 id="score_container">Score: <span id="score">1</span></h2>
+      <div id="game_over">GAME OVER<br><button>Restart</button></div>
+      <div class="simon-container">
+        <div class="simon-button green"></div>
+        <div class="simon-button red"></div>
+        <div class="simon-button yellow"></div>
+        <div class="simon-button blue"></div>
+      </div>
+    </section>
+    <audio id="greenAudio" src="i was born by the river.m4a"></audio>
+    <audio id="yellowAudio" src=""></audio>
+    <audio id="redAudio" src=""></audio>
+    <audio id="blueAudio" src=""></audio>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous">
+    </script>
+
+    <script src="simon.js"></script>
+    <script src="buttons.js"></script>
+  </body>
+</html>
