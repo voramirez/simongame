@@ -39,12 +39,12 @@ function addToList() {
 	buttonsToClick.push(newColor);
 }
 
-// This function uses setInterval to show all the colors for the user to push.
+// This function uses setTimeout to show all the colors for the user to push.
 function showColorSequence() {
 	let currentButtonBeingShow = 0;
 
 	// This interval will show a new button every 500 ms.
-	let intervalID = setInterval(function() {
+	let IntervalID = setTimeout(function() {
 		// Get the current color of the button that will be shown.
 		let color = buttonsToClick[currentButtonBeingShow];
 		let button = document.querySelector(".simon-button." + color);
@@ -60,7 +60,7 @@ function showColorSequence() {
 
 		// If the end of the sequence has been reached, or the game is over, stop showing more colors.
 		if (currentButtonBeingShow == buttonsToClick.length || gameIsOver) {
-			clearInterval(intervalID);
+			clearTimeout(intervalID);
 		}
 	}, 470);
 }
